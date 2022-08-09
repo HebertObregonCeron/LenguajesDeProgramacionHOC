@@ -1,0 +1,7 @@
+Paso uno crear el codigo mediante el uso de el bloc de notas
+Guardar el archivo con la extension: asm
+Guardar el archivo en la carpeta Tasm
+Dentro del emulador utilizar el comando tasm junto al nombre
+de nuestro archvo con su respectiva terminacion
+Generar el programa objeto mediante el uso del comando
+Tlink junto al nombre de nuestro archivo con la extension obj
