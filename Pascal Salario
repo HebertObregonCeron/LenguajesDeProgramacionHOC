@@ -1,0 +1,17 @@
+program Salario;
+var
+extra, salario, total,i : Real;
+
+begin
+
+    salario:=3500;
+
+    extra:=0.10*salario;
+    while i>=5 do
+    begin
+    writeln('Aumento anual');
+
+    total:=extra+salario;
+    writeln(total);
+    end;
+end.
