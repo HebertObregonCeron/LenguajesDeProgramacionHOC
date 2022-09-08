@@ -1,0 +1,21 @@
+1. Inicio
+2. Leer edad
+3. Leer promedio
+4. Si edad >=18
+5.   Si promedio >=9&&promedio<=10
+6.     imprimir "La beca sera de $2000"
+7.   contrario si promedio es >=7.5 && promedio <=9
+8.     imprimir "La beca sera de $1000"
+9.   contrario Si promedio >= 6 && promedio <=7.5
+10.    imprimir "La beca sera de $500"
+11.  contrario si promedio <=6
+12.     imprimir "Enviar carta"
+13. Contrario si edad <18
+14.   Si promedio >=9&&promedio<=10
+15.     imprimir "La beca sera de $3000"
+16.   contrario si promedio es >=8 && promedio <=9
+17.     imprimir "La beca sera de $2000"
+18.   contrario Si promedio >= 6 && promedio <=8
+19.    imprimir "La beca sera de $100"
+20.  contrario si promedio <=6
+21.     imprimir "Enviar carta"
