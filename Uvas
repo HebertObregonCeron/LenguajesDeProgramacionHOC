@@ -1,0 +1,41 @@
+program uva
+        integer tamanoU
+        integer precioUvaI
+        character(1) tipoU
+        real precioU
+        real precioUF
+
+        write(*,*)'ASOCIACION DE VINICULTORES'
+        write(*,*)'Ingresa el precio de la uva'
+        read*, precioUvaI
+        write(*,*)'Ingresa el tipo de uva: a/b'
+        read*, tipoU
+        write(*,*)'Ingresa el tamano de uva: 1/2'
+        read*, tamanoU
+
+        if(tipoU=='a') then
+                      if(tamanoU==1) then
+                                    precioU=0.20
+                                    precioUF=precioUvaI-precioU
+                      else if(tamanoU==2) then
+                                    precioU=0.30
+                                    precioUF=precioUvaI-precioU
+                      else
+                                    write(*,*)'Ingresa tipo 1 o 2'
+                      end if
+        else if(tipoU=='b') then
+                      if(tamanoU==1) then
+                                    precioU=.30
+                                    precioUF=precioUvaI-precioU
+                      else if(tamanoU==2) then
+                                    precioU=.50
+                                    precioUF=precioUvaI-precioU
+                      else
+                                    write(*,*)'solo hay tipo 1 o 2'
+                      end if
+         else
+                      write(*,*)'solo hay tipo a o b'
+         end if
+         write(*,*)'El precio es',precioUF
+         pause
+         end program uva
