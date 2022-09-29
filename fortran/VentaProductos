@@ -4,7 +4,7 @@ program ventaproductos
         real precio, totalF, precioA
         character(20) nomPro
 
-        write(*,*)'INGRESA LA CANTIDAD DE PRODUCTOS A VENDER'
+        write(*,*)'INGRESA LA CANTIDAD DE PRODUCTOS A COMPRAR'
         read*, numPV
 
         do z=1,numPV
