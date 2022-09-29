@@ -1,1 +1,56 @@
 
+program poliza
+        implicit none
+        integer tipo, edad
+        character(2) beber, lentes, enfermedad
+        real costoA, costoB, costoC, costoD, costoE, costoPoliza
+
+        write(*,*) 'Ingresa el tipo de la poliza 1/2'
+        read(*,*) tipo
+
+        if (tipo==1) then
+              costoA=1200
+        else if (tipo==2) then
+             costoA=950
+        else
+             print *, 'ERROR escoge un tipo de poliza valido'
+        end if
+
+        write(*,*) 'La persona bebe alcohol: si/no'
+        read(*,*) beber
+        write(*,*) 'La persona usa lentes: si/no'
+        read(*,*) lentes
+        write(*,*) 'La persona padece alguna enfermedad, si/no?'
+        read(*,*) enfermedad
+        write(*,*) 'Ingrese la edad de la persona'
+        read(*,*) edad
+
+        if (beber=='si') then
+              costoB=costoA*0.10
+        else
+              costoB=0
+        end if
+        !!!!!!!!!!
+        if (lentes=='si') then
+              costoC=costoA*0.05
+        else
+              costoC=0
+        end if
+
+        if (enfermedad=='si') then
+              costoD=costoA*0.05
+        else
+              costoD=0
+        end if
+
+        if (edad>40) then
+              costoE=costoA*0.20
+        else
+              costoE=costoA*0.10
+        end if
+        costoPoliza = costoA+costoB+costoC+costoD+costoE
+        print *, 'La poliza tendra un costo total de: ',costoPoliza
+        pause
+
+
+        end program poliza
