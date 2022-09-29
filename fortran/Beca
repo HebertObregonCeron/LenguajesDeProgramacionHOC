@@ -1,1 +1,38 @@
+program becaAl
+        implicit none
+        integer edad
+        real beca
+        real promedio
 
+
+        write(*,*) 'Ingresa la edad del estudiante'
+        read(*,*) edad
+        write(*,*) 'Ingresa el promedio del estudiante'
+        read(*,*) promedio
+
+        if(edad>18) then
+                    if(promedio>=9) then
+                                   beca=2000
+                    else if(promedio>=7.5) then
+                                   beca=1000
+                    else if(promedio>=6) then
+                                   beca=500
+                    else
+                                write(*,*) 'ENVIAR CARTA DE MOTIVACION'
+                    end if
+        else
+                    if(promedio>=9) then
+                                   beca=3000
+                                write(*,*) 'La beca sera de: ',beca
+                    else if(promedio>=8) then
+                                   beca=2000
+                                write(*,*) 'La beca sera de: ',beca
+                    else if(promedio>=6) then
+                                   beca=100
+                                write(*,*) 'La beca sera de: ',beca
+                    else
+                                write(*,*) 'ENVIAR CARTA DE MOTIVACION'
+                    end if
+        end if
+        pause
+        end program becaAl
