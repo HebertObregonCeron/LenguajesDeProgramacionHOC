@@ -8,11 +8,11 @@ program ventaproductos
         read*, numPV
 
         do z=1,numPV
-              write(*,*)'Nombre del Producto:',z
+              write(*,*)'Nombre del Producto #',z
               read*, nomPro
-              write(*,*)'Precio por unidad'
+              write(*,*)'Precio por unidad: '
               read*, precio
-              write(*,*)'Cantidad de productos a cobrar'
+              write(*,*)'Cantidad de productos a cobrar: '
               read*, cantiPro
               precioA=precio*cantiPro
               if(precioA>=1000) then
@@ -20,6 +20,6 @@ program ventaproductos
               end if
               totalF=totalF+precioA
         end do
-        write(*,*)'El total a pagar es ',totalF
+        write(*,*)'El total a pagar es de:',totalF
         pause
         end program ventaproductos
