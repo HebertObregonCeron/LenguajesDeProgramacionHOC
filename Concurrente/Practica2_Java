@@ -1,1 +1,39 @@
 Practica2_Java
+public class ThreadEjemplo extends Thread{
+    public ThreadEjemplo(String str){
+        super(str);
+    }
+    public void run(){
+        for(int i=0;i<10;i++){
+            System.out.println(i+" "+getName());
+            System.out.println("Termina Thread"+getName());
+        }
+            
+    }
+    public static void main (String [] args){
+        new ThreadEjemplo("Lenguajes").start();
+        new ThreadEjemplo("Concurrentes").start();
+        System.out.println("Termina Thread main");
+    }
+}
+
+
+
+//
+
+public class ThreadEjemplo implements Runnable{
+    public void run(){
+        for(int i=0;i<5;i++){
+            System.out.println(i+" "+ 
+                    Thread.currentThread().getName());
+            System.out.println("Termina Thread"+
+                    Thread.currentThread().getName());
+        }
+            
+    }
+    public static void main (String [] args){
+        new Thread(new ThreadEjemplo(), "Lenguajes").start();
+        new Thread(new ThreadEjemplo(), "Concurrentes").start();
+        System.out.println("Termina Thread main");
+    }
+}
